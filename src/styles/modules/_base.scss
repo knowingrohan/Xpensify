@@ -1,0 +1,71 @@
+html {
+    font-family: "Fira Mono", monospace;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    background: #282c34;
+    color: #d7dae0;
+    @include media-query(mobile) {
+        font-size: 90%;
+    }
+}
+html, body{
+    height: 100%;
+}
+/* Copy & Lists */
+p {
+    font-size: retr(18);
+    line-height: 1.5;
+    margin-bottom: retr(10);
+}
+ul {
+    margin-bottom: retr(10);
+    padding: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+        margin-right: retr(10);
+    }
+}
+
+/* Headings */
+h1,
+h2 {
+    line-height: 2;
+    color: $white;
+}
+h1 {
+    font-size: retr(48);
+    line-height: 2;
+}
+h2 {
+    font-size: retr(40);
+    line-height: 2;
+}
+
+/* Tables */
+/* Code blocks */
+
+.site-container {
+    width: retr(800);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    justify-content: space-between;
+    @include media-query(phablet) {
+        width: 90%;
+    }
+}
+
+a {
+    color: #e5c07b;
+    text-decoration: none;
+    border-bottom: none;
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid $green;
+    }
+}
+.hotspot{
+    color: $yellow;
+}

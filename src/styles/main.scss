@@ -1,0 +1,15 @@
+//variables
+
+//mixins
+@import "./mixins/functions";
+@import "./mixins/mediaqueries";
+
+//modules
+@import "./modules/colors";
+@import "./modules/reset";
+@import "./modules/base";
+
+//components
+@import "./components/header";
+@import "./components/footer";
+

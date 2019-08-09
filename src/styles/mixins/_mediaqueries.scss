@@ -1,0 +1,71 @@
+//Globalsite, Conference Site, Conference Mini Site and Conference
+$breakpoint-large: '1440px';
+$breakpoint-lg: '1439.98px';
+$breakpoint-medium: '1025px';
+$breakpoint-md: '1024px';
+$breakpoint-small: '768px';
+$breakpoint-sm: '767.98px';
+$breakpoint-xsmall: '376px';
+$breakpoint-xsm: '375.98px';
+
+//iphoneX break points used in media-queries mixin 
+$breakpoint-min-iphonex: 375px;
+$breakpoint-max-iphonex: 812px;
+
+@mixin media-query($point) {
+
+    @if $point==desktoplarge {
+      @media (min-width: $breakpoint-large) {
+        @content ;
+      }
+    }
+  
+    @else if $point==desktopsmall {
+      @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-lg) {
+        @content ;
+      }
+    }
+  
+    @else if $point==desktop {
+      @media (min-width: $breakpoint-medium) {
+        @content ;
+      }
+    }
+  
+    @else if $point==tablet {
+      @media (min-width: $breakpoint-small) and (max-width: $breakpoint-md) {
+        @content ;
+      }
+    }
+  
+    @else if $point==phablet {
+      @media (max-width: $breakpoint-md) {
+        @content ;
+      }
+    }
+    //both iphoneX portrait and landscape
+    @else if $point==iphonex {
+      @media only screen and (min-device-width: $breakpoint-min-iphonex) and (max-device-width: $breakpoint-max-iphonex) and (-webkit-min-device-pixel-ratio: 3) { 
+        @content ;
+      }
+    }
+    //only iphoneX landscape  
+    @else if $point==iphonexlandscape {
+      @media only screen and (min-device-width: $breakpoint-min-iphonex) and (max-device-width: $breakpoint-max-iphonex) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) { 
+        @content ;
+      }
+    }
+  
+    @else if $point==mobile {
+      @media (max-width: $breakpoint-sm) {
+        @content ;
+      }
+    }
+  
+    @else if $point==mobilesmall {
+      @media (max-width: $breakpoint-xsm) {
+        @content ;
+      }
+    }
+  }
+  
