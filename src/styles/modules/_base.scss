@@ -2,11 +2,9 @@ html {
     font-family: "Fira Mono", monospace;
     font-size: 100%;
     -webkit-font-smoothing: antialiased;
-    background: #282c34;
-    color: #d7dae0;
-    @include media-query(mobile) {
-        font-size: 90%;
-    }
+    background: $black;
+    color: $white;
+    
 }
 html, body{
     height: 100%;
@@ -46,15 +44,13 @@ h2 {
 /* Code blocks */
 
 .site-container {
-    width: retr(800);
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100%;
     justify-content: space-between;
-    @include media-query(phablet) {
-        width: 90%;
-    }
+    
 }
 
 a {
