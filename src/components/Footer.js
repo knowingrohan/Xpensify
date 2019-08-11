@@ -1,9 +1,11 @@
 import React from 'react';
+import AddExpense from './AddExpense';
 
 const Footer = () => {
 
     return (
         <footer className="footer">
+            <AddExpense/>
             <div className="footer__social">
                 <ul>
                     <li>

@@ -12,13 +12,12 @@ const App = () => {
         <>
             <Header/>
             <Container>
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={AddCategory}/>
-                </Switch>
-            </Router>
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={AddCategory}/>
+                    </Switch>
+                </Router>
             </Container>
-            
             <Footer/>
         </>
     );
