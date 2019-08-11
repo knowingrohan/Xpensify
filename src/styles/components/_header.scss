@@ -5,8 +5,9 @@
     align-items: center;
     &__logo{
         img{
-            // width: retr(60);
-            border: 1px solid $yellow;
+            width: retr(64);
+            border: retr(2) solid $yellow;
+            border-radius: 20%;
         }
     }
     
